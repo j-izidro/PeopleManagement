@@ -1,0 +1,1 @@
+insert into person values ('Marllone', 'Prédio', 'Itaboraí', '24855-072', '2022-12-31', 23);
