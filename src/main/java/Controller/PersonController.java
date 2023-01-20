@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
 
 import java.util.List;
 
@@ -19,7 +20,12 @@ public class PersonController {
 
     @GetMapping
     public ResponseEntity<List<Person>> getAll(){
-        return ResponseEntity.ok(personService.getAll());
+        try {
+            return ResponseEntity.ok(personService.getAll());
+        }
+        catch (Exception e){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
 }

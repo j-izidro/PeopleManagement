@@ -17,4 +17,4 @@ create table Person
     Number INTEGER NOT NULL
 );
 
-insert into Person values (1,'Marllone', 'Prédio', 'Itaboraí', '24855-072', '2022-12-31', 23);
+insert into Person values (1,'Jéssica', 'Prédio', 'Itaboraí', '24855-072', '2022-12-31', 23);
