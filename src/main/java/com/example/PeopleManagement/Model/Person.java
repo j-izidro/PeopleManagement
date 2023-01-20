@@ -1,22 +1,25 @@
 package com.example.PeopleManagement.Model;
-
 import jakarta.persistence.*;
-
 import java.util.Date;
 
 @Entity
-//@Table(name= "person")
+@Table(name= "person")
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer id;
 
+    @Column(name = "name")
     public String name;
-    public String locationType;
+    @Column(name = "location_type")
+    public String location_type;
+    @Column(name = "city")
     public String city;
-    public String zipCode;
-    public Date birthDate;
-
+    @Column(name = "zip_code")
+    public String zip_code;
+    @Column(name = "birth_date")
+    public Date birth_date;
+    @Column(name = "number")
     public int number;
 
     public Integer getId() {
@@ -36,11 +39,11 @@ public class Person {
     }
 
     public String getLocationType() {
-        return locationType;
+        return location_type;
     }
 
     public void setLocationType(String locationType) {
-        this.locationType = locationType;
+        this.location_type = locationType;
     }
 
     public String getCity() {
@@ -52,19 +55,19 @@ public class Person {
     }
 
     public String getZipCode() {
-        return zipCode;
+        return zip_code;
     }
 
     public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
+        this.zip_code = zipCode;
     }
 
     public Date getBirthDate() {
-        return birthDate;
+        return birth_date;
     }
 
     public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
+        this.birth_date = birthDate;
     }
 
     public int getNumber() {

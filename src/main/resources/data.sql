@@ -2,19 +2,19 @@ drop table if exists Person;
 
 create table Person
 (
-    id int auto_increment primary key,
+    id int auto_increment primary key not null,
 
-    Name VARCHAR(25) NOT NULL,
+    name VARCHAR(25) NOT NULL,
 
-    LocationType VARCHAR(15),
+    location_type VARCHAR(15),
 
-    City VARCHAR(15),
+    city VARCHAR(15),
 
-    ZipCode VARCHAR(15),
+    zip_code VARCHAR(15),
 
-    BirthDate DATE,
+    birth_date DATE,
 
-    Number INTEGER NOT NULL
+    number INTEGER NOT NULL
 );
 
-insert into Person values (1,'Jéssica', 'Prédio', 'Itaboraí', '24855-072', '2022-12-31', 23);
+insert into Person values (1, 'Jéssica', 'Prédio', 'Itaboraí', '24855-072', '2022-12-31', 23);
