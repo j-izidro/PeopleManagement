@@ -5,6 +5,7 @@ import com.example.PeopleManagement.Repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PersonService {
@@ -16,4 +17,8 @@ public class PersonService {
     public List<Person> getAll() {
         return personRepository.findAll();
     }
+    public Optional<Person> getById(int personId) {return personRepository.findById(personId);}
+    public Person create(Person person) {return personRepository.save(person); }
+    public void delete(int personId) {personRepository.deleteById(personId);}
+
 }
