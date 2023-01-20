@@ -36,7 +36,7 @@ public class PersonController {
         }
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{personId}")
     public ResponseEntity<HttpStatus> delete(@PathVariable("personId") int personId){
         try{
             personService.delete(personId);
@@ -47,7 +47,7 @@ public class PersonController {
         }
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{personId}")
     public ResponseEntity<Person> update(@PathVariable("personId") int personId, @RequestBody Person person){
         Optional<Person> personData = personService.getById(personId);
 
