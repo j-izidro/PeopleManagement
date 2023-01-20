@@ -1,6 +1,6 @@
-package Repository;
+package com.example.PeopleManagement.Repository;
 
-import Model.Person;
+import com.example.PeopleManagement.Model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

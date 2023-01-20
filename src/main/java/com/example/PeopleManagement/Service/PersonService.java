@@ -1,9 +1,8 @@
-package Service;
+package com.example.PeopleManagement.Service;
 
-import Model.Person;
-import Repository.PersonRepository;
+import com.example.PeopleManagement.Model.Person;
+import com.example.PeopleManagement.Repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import java.util.List;
 

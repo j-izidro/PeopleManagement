@@ -1,7 +1,7 @@
-package Controller;
+package com.example.PeopleManagement.Controller;
 
-import Model.Person;
-import Service.PersonService;
+import com.example.PeopleManagement.Model.Person;
+import com.example.PeopleManagement.Service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
-    @GetMapping
+    @GetMapping("/getAll")
     public ResponseEntity<List<Person>> getAll(){
         try {
             return ResponseEntity.ok(personService.getAll());
@@ -27,5 +27,8 @@ public class PersonController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
+    @GetMapping("/test")
+    public String Test(){
+        return "Hello";
+    }
 }
